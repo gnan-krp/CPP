@@ -1,0 +1,30 @@
+name: C++ Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install g++
+      run: sudo apt-get install g++
+
+    - name: Build all programs
+      run: |
+        g++ 1D_Array_Frequency/main.cpp -o 1D_Array_Frequency/frequency
+        g++ 2D_Array_MatrixMultiplication/main.cpp -o 2D_Array_MatrixMultiplication/matrix
+        g++ Function_SwapNumbers/main.cpp -o Function_SwapNumbers/swap
+        g++ Pattern_Diamond/main.cpp -o Pattern_Diamond/diamond
+        g++ PointerToFunction_Calculator/main.cpp -o PointerToFunction_Calculator/calculator
+        g++ PointerToStructure_Pointer/main.cpp -o PointerToStructure_Pointer/point
+        g++ Recursion_SumOfDigits/main.cpp -o Recursion_SumOfDigits/sum
+        g++ String_Palindrome/main.cpp -o String_Palindrome/palindrome
+        g++ Structure_StudentAverage/main.cpp -o Structure_StudentAverage/student
+        g++ Unique_MatrixTranspose/main.cpp -o Unique_MatrixTranspose/transpose
