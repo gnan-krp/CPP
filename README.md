@@ -1,3 +1,5 @@
+![C++ Build](https://github.com/gnan-krp/CPP/actions/workflows/cpp-build.yml/badge.svg)
+
 # C++ Practice Programs
 
 This repository contains **10 C++ programs** covering beginner to moderate-level topics.  
