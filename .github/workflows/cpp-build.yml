@@ -11,12 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # Step 2: Install g++
       - name: Install g++
         run: sudo apt-get update && sudo apt-get install g++ -y
 
+      # Step 3: Compile all programs
       - name: Compile all programs
         run: |
           echo "Compiling 1D_Array_Frequency..."
