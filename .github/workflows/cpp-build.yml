@@ -11,20 +11,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Install g++
         run: sudo apt-get update && sudo apt-get install g++ -y
 
       - name: Compile all programs
         run: |
-          g++ 1D_Array_Frequency/main.cpp -o 1D_Array_Frequency
-          g++ 2D_Array_MatrixMultiplication/main.cpp -o 2D_Array_MatrixMultiplication
-          g++ Function_SwapNumbers/main.cpp -o Function_SwapNumbers
-          g++ Pattern_Diamond/main.cpp -o Pattern_Diamond
-          g++ PointerToFunction_Calculator/main.cpp -o PointerToFunction_Calculator
-          g++ PointerToStructure_Pointer/main.cpp -o PointerToStructure_Pointer
-          g++ Recursion_SumOfDigits/main.cpp -o Recursion_SumOfDigits
-          g++ String_Palindrome/main.cpp -o String_Palindrome
-          g++ Structure_StudentAverage/main.cpp -o Structure_StudentAverage
-          g++ Unique_MatrixTranspose/main.cpp -o Unique_MatrixTranspose
+          echo "Compiling 1D_Array_Frequency..."
+          g++ 1D_Array_Frequency/main.cpp -o 1D_Array_Frequency/frequency
+
+          echo "Compiling 2D_Array_MatrixMultiplication..."
+          g++ 2D_Array_MatrixMultiplication/main.cpp -o 2D_Array_MatrixMultiplication/matrix
+
+          echo "Compiling Function_SwapNumbers..."
+          g++ Function_SwapNumbers/main.cpp -o Function_SwapNumbers/swap
+
+          echo "Compiling Pattern_Diamond..."
+          g++ Pattern_Diamond/main.cpp -o Pattern_Diamond/diamond
+
+          echo "Compiling PointerToFunction_Calculator..."
+          g++ PointerToFunction_Calculator/main.cpp -o PointerToFunction_Calculator/calculator
+
+          echo "Compiling PointerToStructure_Pointer..."
+          g++ PointerToStructure_Pointer/main.cpp -o PointerToStructure_Pointer/point
+
+          echo "Compiling Recursion_SumOfDigits..."
+          g++ Recursion_SumOfDigits/main.cpp -o Recursion_SumOfDigits/sum
+
+          echo "Compiling String_Palindrome..."
+          g++ String_Palindrome/main.cpp -o String_Palindrome/palindrome
+
+          echo "Compiling Structure_StudentAverage..."
+          g++ Structure_StudentAverage/main.cpp -o Structure_StudentAverage/student
+
+          echo "Compiling Unique_MatrixTranspose..."
+          g++ Unique_MatrixTranspose/main.cpp -o Unique_MatrixTranspose/transpose
